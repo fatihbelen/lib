@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Library Application</title>
+		<link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.0.min.css"/>
+        <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile.theme-1.4.0.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+		<script type="text/javascript" charset="utf-8" src="jquery/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile-1.4.0.js"></script>
+	</head>
+	<body>
+		<!-- Advanced Search -->
+		<div data-role="page" id="home">
+			
+			<div data-role="header">
+				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+    				<div data-role="listview" data-corners="true">
+            			<li><a href="#login" data-role="button">Login</a></li>
+            			<li><a href="#settings" data-role="button">Settings</a></li>
+        			</div>
+    			</div>
+    			<div id="header" data-role="header">
+    				<center><h3>Library Application</h3></center>
+        			<a id="bars-button" data-icon="bars" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+				</div>
+			</div>
+			<div data-role="content" class="fit-content">
+				<div class="resizer">
+					<label>Welcome!</label>
+				</div>
+				<div class="fit-content">
+					<input type="search" name="search" id="search" value="" placeholder="search keywords" data-mini="true"/>
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+				        <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="checked">
+				        <label for="radio-choice-h-2a">Keyword</label>
+				        <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
+				        <label for="radio-choice-h-2b">Author</label>
+				        <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2c" value="other">
+				        <label for="radio-choice-h-2c">Title</label>
+				        <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2d" value="other">
+				        <label for="radio-choice-h-2d">Call #</label>
+				    </fieldset>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Start of second page -->
+		<div data-role="page" id="bar" class="fitPage">
+		
+			<div data-role="header">
+				<h1>Bar</h1>
+			</div><!-- /header -->
+		
+			<div data-role="content">
+				<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+				<p><a href="#foo" data-transition="slide">Back to foo</a></p>
+			</div><!-- /content -->
+		
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div><!-- /footer -->
+		</div>
+
+
+
+
+        <!-- login page  -->
+
+
+        <div data-role="page" id="login">
+            <div data-role="header">
+				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+    				<div data-role="listview" data-corners="true">
+            			<li><a href="#home" data-role="button">Search</a></li>
+            			<li><a href="#settings" data-role="button">Settings</a></li>
+        			</div>
+    			</div>
+    			<div id="header" data-role="header">
+    				<center><h3>Library Application</h3></center>
+        			<a id="bars-button" data-icon="bars" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+				</div>
+			</div>
+            <div data-role="content" class="fit-content">
+                <label> Please enter your Library Username and Password</label>
+
+                <input type="text" name="username" id="username" placeholder="Username">
+                <input type="password" name="password" id="password" placeholder="Password">
+
+
+                <a href="#profile" data-role="button"  data-inline="true" >Login</a>
+
+            </div>
+            <div data-role="footer">
+                <h1> Copyright (r) GOF-HCI2013 </h1>
+            </div>
+
+        </div>
+
+        <!-- profile page  -->
+        <div data-role="page" id="profile">
+            <div data-role="header">
+				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+    				<div data-role="listview" data-corners="true">
+    					<li><a href="#home" data-role="button">Search</a></li>
+            			<li><a href="#home" data-role="button">Logout</a></li>
+            			<li><a href="#settings" data-role="button">Settings</a></li>
+        			</div>
+    			</div>
+    			<div id="header" data-role="header">
+    				<center><h3>Library Application</h3></center>
+        			<a id="bars-button" data-icon="bars" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+				</div>
+			</div>
+            <div data-role="content">
+                <div>
+                    <p>Welcome Dark Lord</p>
+                    <p> - You have 27 $ fine</p>
+                    <p> - You have 2 book due</p>
+
+                </div>
+                <div>
+                    <label>Borrowed Books</label>
+                </div>
+
+                <div data-role="collapsible-set">
+                    <div data-role="collapsible">
+                        <h1>Book1</h1>
+                        <p>book1 description</p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h1>Book2</h1>
+                        <p>book1 description</p>
+                    </div>
+                </div>
+
+                <div>
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <a href="#login" data-role="button">Search</a>
+                        <a href="#login" data-role="button">Reading History</a>
+                        <a href="#login" data-role="button">Renew Selected</a>
+                        <a href="#login" data-role="button">Renew All</a>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div data-role="footer">
+                <h1> Copyright (r) GOF-HCI2013 </h1>
+            </div>
+        </div>
+    </body>
+</html>
