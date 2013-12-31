@@ -12,9 +12,13 @@
 		<script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile-1.4.0.js"></script>
 		<script type="text/javascript" charset="utf-8" src="jquery/jquery.rating.js"></script>
         <script type="text/javascript">
-            $("#p1").bind('swipeleft', function()
-            { $.mobile.changePage("#details");
+            $(document).on('pageinit', function(event){
+                $('p1').on("swipeleft", function () {
+                        $.mobile.changePage("#details", "slide", false, true);
+
+                });
             });
+
 
         </script>
 
